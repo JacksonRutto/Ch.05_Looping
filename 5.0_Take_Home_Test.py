@@ -5,6 +5,7 @@ but I will definitely not ask another person except the instructor. Signed: ____
 
  1. Make the following program work.
    '''
+
 print("This program takes three numbers and returns the sum.")
 total = 0
 
@@ -19,8 +20,10 @@ print("The total is:", x)
   2. Write a Python program that will use a FOR loop to print the even
      numbers from 2 to 100, inclusive.
 '''
-for i in range(2,100)
-    print(i)
+
+for i in range(0,101):
+    if (i % 2 == 0):
+        print(i)
 
 
 
@@ -29,8 +32,13 @@ for i in range(2,100)
      10 down to, and including, 0. Then print the words Blast off! Remember, use
      a WHILE loop, don't use a FOR loop.
 '''
-while i != 0:
 
+i = 11
+while i >= 1:
+     i -= 1
+     print(i)
+     if i == 0:
+        print("Blast off!")
 
 
 
@@ -40,8 +48,10 @@ while i != 0:
   4. Write a program that prints a random integer from 1 to 10 (inclusive).
 '''
 
+import random
 
-
+number = random.randrange(1,11)
+print(number)
 
 
 
@@ -55,3 +65,11 @@ while i != 0:
      if statements.
       
 '''
+print("Enter 7 numbers")
+print()
+total = 0
+for i in range (7):
+    number = int(input("Enter a number: "))
+    total += number
+    print("Total is: ", total)
+    if number ==
