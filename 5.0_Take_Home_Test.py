@@ -4,14 +4,14 @@ but I will definitely not ask another person except the instructor. Signed: ____
 
 
  1. Make the following program work.
-   '''  
-     print("This program takes three numbers and returns the sum.")
-     total = 0
+   '''
+print("This program takes three numbers and returns the sum.")
+total = 0
 
-     for i in range(3):
-         x = input("Enter a number: ")
-         total = total + i
-     print("The total is:", x)
+for i in range(3):
+    x = input("Enter a number: ")
+    total = total + i
+print("The total is:", x)
   
 
 
@@ -29,6 +29,7 @@ for i in range(2,100)
      10 down to, and including, 0. Then print the words Blast off! Remember, use
      a WHILE loop, don't use a FOR loop.
 '''
+while i != 0:
 
 
 
