@@ -65,11 +65,23 @@ print(number)
      if statements.
       
 '''
+zero = 0
+pos = 0
+neg = 0
+
 print("Enter 7 numbers")
 print()
 total = 0
 for i in range (7):
     number = int(input("Enter a number: "))
     total += number
-    print("Total is: ", total)
-    if number ==
+    if number > 0:
+        pos += 1
+    elif number < 0:
+        neg += 1
+    else:
+        zero += 1
+print("Total is:", total)
+print("Amount of positive entries:", pos)
+print("Amount of negative entries:", neg)
+print("Amount of entries as zero:", zero)
