@@ -11,7 +11,11 @@ When the user quits print a win/loss record
 
 '''
 
+rock = 1
+paper = 2
+scissors = 3
 
+while
 
 
 
