@@ -13,10 +13,11 @@ tails = 0
 
 for i in range(50):
     number = random.randrange(1,3)
-    print(number)
     if number ==1:
-        print(heads)
+        print("heads")
         heads += 1
     else:
-        print(tails)
+        print("tails")
         tails += 1
+print("Times landed on heads:", heads)
+print("Times landed on tails:", tails)
