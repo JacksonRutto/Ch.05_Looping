@@ -10,14 +10,18 @@ Add conditional statements to figure out who wins and keep the records
 When the user quits print a win/loss record
 
 '''
+import random
 
 rock = 1
 paper = 2
 scissors = 3
+opp = random.randrange(1,3)
 
-while
-
-
+for i in range:
+    atk = input("What do you want to throw: type 1 for rock, type 2 for paper, type 3 for scissors")
+    print(opp)
+    if atk and opp == 2:
+        print("tie go again")
 
 
 
