@@ -12,16 +12,40 @@ When the user quits print a win/loss record
 '''
 import random
 
-rock = 1
-paper = 2
-scissors = 3
-opp = random.randrange(1,3)
 
-for i in range:
-    atk = input("What do you want to throw: type 1 for rock, type 2 for paper, type 3 for scissors")
-    print(opp)
-    if atk and opp == 2:
-        print("tie go again")
+while True:
+
+    player = int(input("What do you want to throw: \n Type 1 for rock \n Type 2 for paper \n Type 3 for scissors \n"))
+print()
+    while player > 3 or player < 1:
+        player = int(input("Invalid option: \n Type 1 for rock \n Type 2 for paper \n Type 3 for scissors \n"))
+    if player == 1:
+        choice = "rock"
+
+    elif player == 2:
+        choice = "paper"
+
+    else:
+        choice = "scissors"
+
+    print("You're choice was", choice)
+print()
+    opp_choice = random.randrange(1, 4)
+
+    if opp_choice == 1:
+        opp = "rock"
+
+    elif opp_choice == 2:
+        opp = "paper"
+
+    else:
+        opp = "scissors"
+
+    print("Computer choice was", opp)
+    print()
+    print(choice, "vs", opp)
+
+
 
 
 
