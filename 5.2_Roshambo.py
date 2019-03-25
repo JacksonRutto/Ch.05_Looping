@@ -16,7 +16,7 @@ import random
 while True:
 
     player = int(input("What do you want to throw: \n Type 1 for rock \n Type 2 for paper \n Type 3 for scissors \n"))
-print()
+    print()
     while player > 3 or player < 1:
         player = int(input("Invalid option: \n Type 1 for rock \n Type 2 for paper \n Type 3 for scissors \n"))
     if player == 1:
@@ -29,7 +29,8 @@ print()
         choice = "scissors"
 
     print("You're choice was", choice)
-print()
+    print()
+
     opp_choice = random.randrange(1, 4)
 
     if opp_choice == 1:
@@ -44,6 +45,7 @@ print()
     print("Computer choice was", opp)
     print()
     print(choice, "vs", opp)
+
 
 
 
