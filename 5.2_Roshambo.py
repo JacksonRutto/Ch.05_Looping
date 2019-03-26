@@ -12,8 +12,12 @@ When the user quits print a win/loss record
 '''
 import random
 
+game = false
+while game == False:
 
-while True:
+    win = 0
+    loss = 0
+
 
     player = int(input("What do you want to throw: \n Type 1 for rock \n Type 2 for paper \n Type 3 for scissors \n"))
     print()
@@ -29,7 +33,6 @@ while True:
         choice = "scissors"
 
     print("You're choice was", choice)
-    print()
 
     opp_choice = random.randrange(1, 4)
 
@@ -46,11 +49,37 @@ while True:
     print()
     print(choice, "vs", opp)
 
+    if player == opp_choice:
+        print("Tie, go again")
 
+    elif player == 1:
+        if opp_choice == 2:
+            print("Computer wins")
+            loss += 1
+        else:
+            print("You win!!!")
+            win += 1
 
+    elif player == 2:
+        if opp_choice == 3:
+            print("Computer wins")
+            loss += 1
+        else:
+            print("You win!!!")
+            win += 1
 
-
-
+    elif player == 3:
+        if opp_choice == 1:
+            print("Computer wins")
+            loss += 1
+        else:
+            print("You win!!!")
+            win += 1
+    else:
+        print("Invalid play")
+    print()
+    print(win, "-", loss)
+    print()
 
 
 
