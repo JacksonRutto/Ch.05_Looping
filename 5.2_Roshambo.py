@@ -15,9 +15,9 @@ import random
 choice = 0
 win = 0
 loss = 0
-game = False
+done = False
 
-while game == False:
+while not done:
 
     player = int(input("What do you want to throw: \n Type 1 for rock \n Type 2 for paper \n Type 3 for scissors \n Type 4 to quit \n"))
     print()
@@ -35,7 +35,7 @@ while game == False:
     elif player == 4:
         print("Game over")
         print("Final score is", win,"-", loss)
-        game = True
+        done = True
 
     print("You're choice was", choice)
 
@@ -86,7 +86,7 @@ while game == False:
     print(win, "-", loss)
     print()
 
-    if game == True:
+    if done == True:
         print("Game Over")
         print("Final score is", win, "-", loss)
 
