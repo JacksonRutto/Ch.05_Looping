@@ -46,10 +46,55 @@ while not done:
     elif user_choice.upper() == "C":
         print()
         miles += random.randrange(10,21)
+        print(miles)
         thirst += 1
         camel += random.randrange(1,4)
         natives += random.randrange(7, 15)
+
+
+    elif user_choice.upper() == "B":
+        print()
+        miles =+ random.randrange(5,13)
         print(miles)
-        print(natives)
-        print(camel)
-        print(thirst)
+        thirst += 1
+        camel += 1
+        natives += random.randrange(7, 15)
+
+    elif user_choice.upper() == "A":
+        print()
+        if canteen > 0:
+            canteen -= 1
+            thirst = 0
+        elif canteen == 0:
+            print("No drinks left in canteen, must refill")
+        else:
+            print("No drinks left in canteen, must refill")
+
+    if thirst > 4:
+        print("You are thirsty")
+        if thirst == 6:
+            break
+
+    if thirst == 6:
+        print("You died of thirst")
+
+    if camel > 5:
+        print("Your camel is getting tired")
+        if camel == 8:
+            break
+
+    if camel == 8:
+        print("Your camel is dead")
+
+    if natives == miles:
+        print("The natives have caught you")
+        done = True
+
+    if natives
+
+
+    if miles == 200:
+        print("You won!!!")
+
+
+
