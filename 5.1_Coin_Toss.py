@@ -13,7 +13,7 @@ tails = 0
 
 for i in range(50):
     number = random.randrange(1,3)
-    if number ==1:
+    if number == 1:
         print("heads")
         heads += 1
     else:

@@ -15,6 +15,8 @@ canteen = 3
 
 done = False
 
+# user choices
+
 while not done:
     print()
     print("A. Drink from your canteen")
@@ -29,32 +31,34 @@ while not done:
     user_choice = input("What's your choice? ")
 
     if user_choice.upper() == "Q":
+        print("Game Over")
         done = True
 
     elif user_choice.upper() == "E":
         print()
         print("Miles traveled:", miles)
         print("Drinks in canteen", canteen)
-        print("The natives are", natives, "miles behind you")
+        print("The natives are", miles - natives, "miles behind you")
+        print(camel)
+        print(thirst)
 
     elif user_choice.upper() == "D":
         print()
         camel = 0
         print("Camel is happy :)")
-        natives += random.randrange(7,15)
+        natives += random.randrange(7, 15)
 
     elif user_choice.upper() == "C":
         print()
-        miles += random.randrange(10,21)
+        miles += random.randrange(10, 21)
         print(miles)
         thirst += 1
-        camel += random.randrange(1,4)
+        camel += random.randrange(1, 4)
         natives += random.randrange(7, 15)
-
 
     elif user_choice.upper() == "B":
         print()
-        miles =+ random.randrange(5,13)
+        miles += random.randrange(5, 13)
         print(miles)
         thirst += 1
         camel += 1
@@ -75,26 +79,34 @@ while not done:
         if thirst == 6:
             break
 
-    if thirst == 6:
+    if thirst >= 6:
+        print("Game Over")
         print("You died of thirst")
+        done = True
 
-    if camel > 5:
+    if not done and camel > 5:
         print("Your camel is getting tired")
         if camel == 8:
+            print("Your camel is dead")
             break
 
-    if camel == 8:
-        print("Your camel is dead")
-
-    if natives == miles:
+    if natives >= miles:
+        print("Game Over")
         print("The natives have caught you")
         done = True
 
-    if natives
+    elif natives >= miles - 15:
+        print("natives are getting close")
 
-
-    if miles == 200:
+    if miles >= 200:
         print("You won!!!")
+        done = True
 
+    oasis = random.randrange(1, 21)
 
-
+    if oasis == 1:
+        print()
+        print("You found an oasis")
+        canteen = 3
+        thirst = 0
+        camel = 0
