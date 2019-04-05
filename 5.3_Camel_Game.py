@@ -46,23 +46,23 @@ while not done:
         print()
         camel = 0
         print("Camel is happy :)")
-        natives += random.randrange(7, 15)
+        natives += random.randrange(7, 16)
 
     elif user_choice.upper() == "C":
         print()
-        miles += random.randrange(10, 21)
+        miles += random.randrange(12, 21)
         print(miles)
         thirst += 1
         camel += random.randrange(1, 4)
-        natives += random.randrange(7, 15)
+        natives += random.randrange(8, 19)
 
     elif user_choice.upper() == "B":
         print()
-        miles += random.randrange(5, 13)
+        miles += random.randrange(5, 14)
         print(miles)
         thirst += 1
         camel += 1
-        natives += random.randrange(7, 15)
+        natives += random.randrange(7, 16)
 
     elif user_choice.upper() == "A":
         print()
@@ -74,21 +74,19 @@ while not done:
         else:
             print("No drinks left in canteen, must refill")
 
-    if thirst > 4:
+    if thirst >= 4 and thirst <= 5:
         print("You are thirsty")
-        if thirst == 6:
-            break
 
-    if thirst >= 6:
-        print("Game Over")
-        print("You died of thirst")
-        done = True
+    elif not done and thirst >= 6:
+        print("You've died of thirst")
+        break
 
-    if not done and camel > 5:
+    if camel >= 5 and camel <= 7:
         print("Your camel is getting tired")
-        if camel == 8:
-            print("Your camel is dead")
-            break
+
+    elif not done and camel >= 8:
+        print("Your camel is dead")
+        break
 
     if natives >= miles:
         print("Game Over")
@@ -102,7 +100,7 @@ while not done:
         print("You won!!!")
         done = True
 
-    oasis = random.randrange(1, 21)
+    oasis = random.randrange(1, 31)
 
     if oasis == 1:
         print()
